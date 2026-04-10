@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>The Royal Paradise Constanza</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+  url('https://images.unsplash.com/photo-1605727216801-e27ce1d0cc28');
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+/* NAV */
+nav {
+  background: #1d3557;
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECCIONES */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  width: 260px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* BOTONES */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #e63946;
+  color: white;
+  cursor: pointer;
+}
+
+/* FORMULARIO */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+input, select {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* FOOTER */
+footer {
+  background: #1d3557;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌄 THE ROYAL PARADISE CONSTANZA</h1>
+  <p>Turismo de aventura en el corazón de la naturaleza</p>
+</header>
+
+<nav>
+  <a href="#aventura">Aventura</a>
+  <a href="#hotel">Hotel</a>
+  <a href="#reservas">Reservas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="aventura">
+  <h2>🌿 Turismo de Aventura</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Senderismo</h3>
+      <p>Explora montañas y valles de Constanza</p>
+    </div>
+
+    <div class="card">
+      <h3>Cascadas</h3>
+      <p>Visita Aguas Blancas, una de las más altas del Caribe</p>
+    </div>
+
+    <div class="card">
+      <h3>Camping</h3>
+      <p>Disfruta la naturaleza en Valle Nuevo</p>
+    </div>
+  </div>
+</section>
+
+<section id="hotel">
+  <h2>🏨 Nuestro Hotel</h2>
+  <p>Habitaciones con vista a la montaña, wifi y desayuno incluido</p>
+
+  <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" width="80%" style="border-radius:15px;">
+</section>
+
+<section id="reservas">
+  <h2>📅 Reservar Ahora</h2>
+
+  <form onsubmit="enviarReserva(event)">
+    <input type="text" placeholder="Nombre" required><br>
+    <input type="email" placeholder="Correo" required><br>
+    
+    <select required>
+      <option>Selecciona servicio</option>
+      <option>Hotel</option>
+      <option>Senderismo</option>
+      <option>Camping</option>
+    </select><br>
+
+    <input type="date" required><br>
+
+    <button type="submit">Reservar</button>
+  </form>
+</section>
+
+<section id="contacto">
+  <h2>📞 Contacto</h2>
+  <p>Email: ROYALPARADISECONTANZA@GMAIL.COM</p>
+  <p>Tel: 829-333-1333</p>
+</section>
+
+<footer>
+  © 2026 THE ROYAL PARADISE CONSTANZA
+</footer>
+
+<script>
+function enviarReserva(e) {
+  e.preventDefault();
+  alert("Reserva enviada correctamente ✅");
+}
+</script>
+
+</body>
+</html>
